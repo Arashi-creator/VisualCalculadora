@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculadora));
-            textBox1 = new TextBox();
             btnUm = new Button();
             btnDois = new Button();
             btnTres = new Button();
@@ -49,18 +48,9 @@
             btnDivisao = new Button();
             btnApagar = new Button();
             btnOperacao = new Label();
+            btnTela = new Label();
+            label1 = new Label();
             SuspendLayout();
-            // 
-            // textBox1
-            // 
-            textBox1.BackColor = Color.MidnightBlue;
-            textBox1.Location = new Point(12, 12);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(362, 107);
-            textBox1.TabIndex = 14;
-            textBox1.TextAlign = HorizontalAlignment.Right;
-            textBox1.Visible = false;
             // 
             // btnUm
             // 
@@ -71,6 +61,7 @@
             btnUm.TabIndex = 0;
             btnUm.Text = "1";
             btnUm.UseVisualStyleBackColor = true;
+            btnUm.Click += btnUm_Click;
             // 
             // btnDois
             // 
@@ -81,6 +72,7 @@
             btnDois.TabIndex = 1;
             btnDois.Text = "2";
             btnDois.UseVisualStyleBackColor = true;
+            btnDois.Click += btnDois_Click;
             // 
             // btnTres
             // 
@@ -91,6 +83,7 @@
             btnTres.TabIndex = 2;
             btnTres.Text = "3";
             btnTres.UseVisualStyleBackColor = true;
+            btnTres.Click += btnTres_Click;
             // 
             // btnQuatro
             // 
@@ -101,6 +94,7 @@
             btnQuatro.TabIndex = 4;
             btnQuatro.Text = "4";
             btnQuatro.UseVisualStyleBackColor = true;
+            btnQuatro.Click += btnQuatro_Click;
             // 
             // btnCinco
             // 
@@ -111,6 +105,7 @@
             btnCinco.TabIndex = 5;
             btnCinco.Text = "5";
             btnCinco.UseVisualStyleBackColor = true;
+            btnCinco.Click += btnCinco_Click;
             // 
             // btnSeis
             // 
@@ -121,6 +116,7 @@
             btnSeis.TabIndex = 6;
             btnSeis.Text = "6";
             btnSeis.UseVisualStyleBackColor = true;
+            btnSeis.Click += btnSeis_Click;
             // 
             // btnSete
             // 
@@ -142,6 +138,7 @@
             btnOito.TabIndex = 8;
             btnOito.Text = "8";
             btnOito.UseVisualStyleBackColor = true;
+            btnOito.Click += btnOito_Click;
             // 
             // btnNove
             // 
@@ -152,6 +149,7 @@
             btnNove.TabIndex = 9;
             btnNove.Text = "9";
             btnNove.UseVisualStyleBackColor = true;
+            btnNove.Click += btnNove_Click;
             // 
             // btnSoma
             // 
@@ -162,6 +160,7 @@
             btnSoma.TabIndex = 3;
             btnSoma.Text = "+";
             btnSoma.UseVisualStyleBackColor = true;
+            btnSoma.Click += btnSoma_Click;
             // 
             // btnPonto
             // 
@@ -172,6 +171,7 @@
             btnPonto.TabIndex = 10;
             btnPonto.Text = ".";
             btnPonto.UseVisualStyleBackColor = true;
+            btnPonto.Click += btnPonto_Click;
             // 
             // btnIgual
             // 
@@ -182,6 +182,7 @@
             btnIgual.TabIndex = 11;
             btnIgual.Text = "=";
             btnIgual.UseVisualStyleBackColor = true;
+            btnIgual.Click += btnIgual_Click;
             // 
             // btnMultiplicacao
             // 
@@ -192,6 +193,7 @@
             btnMultiplicacao.TabIndex = 12;
             btnMultiplicacao.Text = "*";
             btnMultiplicacao.UseVisualStyleBackColor = true;
+            btnMultiplicacao.Click += btnMultiplicacao_Click;
             // 
             // btnDelete
             // 
@@ -216,6 +218,7 @@
             btnSubtracao.TabIndex = 15;
             btnSubtracao.Text = "-";
             btnSubtracao.UseVisualStyleBackColor = true;
+            btnSubtracao.Click += btnSubtracao_Click;
             // 
             // btnZero
             // 
@@ -237,6 +240,7 @@
             btnDivisao.TabIndex = 17;
             btnDivisao.Text = "/";
             btnDivisao.UseVisualStyleBackColor = true;
+            btnDivisao.Click += btnDivisao_Click;
             // 
             // btnApagar
             // 
@@ -248,17 +252,43 @@
             btnApagar.Text = "c";
             btnApagar.TextAlign = ContentAlignment.TopCenter;
             btnApagar.UseVisualStyleBackColor = true;
+            btnApagar.Click += btnApagar_Click_1;
             // 
             // btnOperacao
             // 
             btnOperacao.AutoSize = true;
-            btnOperacao.BackColor = Color.GhostWhite;
+            btnOperacao.BackColor = Color.Black;
             btnOperacao.Font = new Font("Segoe UI", 20F);
-            btnOperacao.Location = new Point(23, 52);
+            btnOperacao.Location = new Point(97, 60);
             btnOperacao.Name = "btnOperacao";
             btnOperacao.Size = new Size(132, 37);
             btnOperacao.TabIndex = 19;
             btnOperacao.Text = "Operacao";
+            btnOperacao.Click += btnOperacao_Click;
+            // 
+            // btnTela
+            // 
+            btnTela.AutoSize = true;
+            btnTela.BackColor = Color.Transparent;
+            btnTela.Font = new Font("Segoe UI", 64F);
+            btnTela.Location = new Point(304, 34);
+            btnTela.Name = "btnTela";
+            btnTela.Size = new Size(0, 114);
+            btnTela.TabIndex = 20;
+            btnTela.TextAlign = ContentAlignment.BottomRight;
+            btnTela.Click += btnTela_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Black;
+            label1.Font = new Font("Segoe UI", 14F);
+            label1.Location = new Point(288, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(58, 25);
+            label1.TabIndex = 21;
+            label1.Text = "4+4=";
+            label1.Click += label1_Click;
             // 
             // Calculadora
             // 
@@ -267,12 +297,12 @@
             BackColor = Color.MidnightBlue;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(385, 619);
+            Controls.Add(label1);
             Controls.Add(btnOperacao);
             Controls.Add(btnApagar);
             Controls.Add(btnDivisao);
             Controls.Add(btnZero);
             Controls.Add(btnSubtracao);
-            Controls.Add(textBox1);
             Controls.Add(btnMultiplicacao);
             Controls.Add(btnIgual);
             Controls.Add(btnPonto);
@@ -287,6 +317,7 @@
             Controls.Add(btnDois);
             Controls.Add(btnUm);
             Controls.Add(btnDelete);
+            Controls.Add(btnTela);
             ForeColor = Color.MidnightBlue;
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
@@ -298,8 +329,6 @@
         }
 
         #endregion
-
-        private TextBox textBox1;
         private Button btnUm;
         private Button btnDois;
         private Button btnTres;
@@ -319,5 +348,7 @@
         private Button btnDivisao;
         private Button btnApagar;
         private Label btnOperacao;
+        private Label btnTela;
+        private Label label1;
     }
 }
